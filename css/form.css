@@ -1,0 +1,216 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+@import url(https://fonts.googleapis.com/css?family-lato:400,700,300);
+
+body{
+    display: flex;
+    height: 100vh;
+    font-family: "Lato",sans-serif;
+    justify-content: center;
+    align-items: center;
+    background: url(img.jpeg.jpeg);
+    background-size: cover;
+}
+
+.container{
+    width: 100%;
+    max-width: 950px;
+    background:rgba(255, 255, 255, 0.5);
+    padding: 28px;
+    margin: 0 28px;
+    border-radius: 10px;
+    box-shadow: inset -2px 2px 2px white;
+}
+.form-title{
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 6px;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+    border-bottom: solid 2px black;
+
+}
+
+select{
+    height: 40px;
+    width: 12%;
+    border-radius: 17px;
+    outline: none;
+    border: 1px solid grey;
+    padding: 0 20px;
+    margin: 25px;
+    margin-left: 380px;
+}
+
+
+.main-user-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.user-input-box:nth-child(2n){
+    justify-content: end;
+
+}
+
+.user-input-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 5%;
+    padding-bottom: 15px;
+
+}
+
+.user-input-box-lable{
+    width: 95%;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 5px 0;
+
+}
+
+.user-input-box input{
+    height: 40px;
+    width: 95%;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid grey;
+    padding: 0 10px;
+}
+ 
+
+.form-submit-btn{
+    margin-top: 40px;
+    margin-left: 380px;
+    
+}
+
+.form-submit-btn input{
+    display: block;
+    width: 150%;
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 25px;
+    color: rgb(0, 0, 0);
+    background: -webkit-linear-gradient(to right,#faeb44, #ed3b3b);
+    background: linear-gradient(to right, #faeb44, #ed3b3b);
+}
+
+.form-submit-btn input:hover{
+    background: -webkit-linear-gradient(to right, #ed3b3b,#faeb44);
+    background: linear-gradient(to right, #ed3b3b,#faeb44 );
+    color: rgb(0, 0, 0);
+}
+
+@media(max-width: 600px){
+    .container{
+        min-width: 280px;
+    }
+}
+
+.user-input-box{
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.user-input-box:nth-child(2n){
+    justify-content: space-between;
+}
+
+.main-user-info{
+    max-height: 380px;
+    overflow: auto;
+}
+
+.main-user-info::-webkit-scrollbar{
+    width: 0px;
+}
+
+.form{
+    width: 200px;
+   
+}
+.file-upload-wrapper{
+    position: relative;
+    width: 50%;
+    height: 60px;
+    border-bottom: 1px  solid grey ;
+    border-top: 1px  solid grey ;
+    border-left:1px  solid grey;
+    border-right: 1px  solid grey ;
+    cursor: pointer;
+    padding: 30px;
+    border-radius: 5px 10px 10px 5px;
+   
+}
+.file-upload-wrapper::after{
+    content:attr(data-text);
+    font-size: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    padding: 10px 15px;
+    display: block;
+    width: calc(100% - 40px);
+    pointer-events: none;
+    z-index: 20px;
+    height: 40px;
+    line-height: 40px;
+    color: #999;
+    border-radius: 5px 10px 10px 5px;
+    font-weight: 300;
+    
+   
+
+}
+.file-upload-wrapper::before{
+    content: "upload";
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: inline-block;
+    height: 60px;
+    background: -webkit-linear-gradient(to right,#faeb44, #ed3b3b);
+    background: linear-gradient(to right, #faeb44, #ed3b3b);
+    color: rgb(0, 0, 0);
+    font-weight: 700;
+    z-index: 25;
+    font-size: 16px;
+    line-height: 60px;
+    padding: 0 15px;
+    text-transform: uppercase;
+    pointer-events: none;
+    border-radius: 0 5px 5px 0;
+    transition: 0.5s ease-in-out;
+   
+}
+.file-upload-wrapper:hover:before{
+    background: -webkit-linear-gradient(to right, #ed3b3b,#faeb44);
+    background: linear-gradient(to right, #ed3b3b,#faeb44 );
+}
+.file-upload-wrapper input{
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    cursor: pointer;
+   
+}
